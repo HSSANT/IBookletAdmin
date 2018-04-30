@@ -1,0 +1,14 @@
+ba-progress {
+    .ba-progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        z-index: 20;
+        border-radius: 0;
+    }
+    .animating {
+        transition: width 100ms ease-in-out;
+    }
+}

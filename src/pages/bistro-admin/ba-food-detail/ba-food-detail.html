@@ -1,0 +1,95 @@
+<ion-header>
+    <ba-header></ba-header>
+</ion-header>
+
+<ion-content>
+    <div class="ba-content">
+        <ba-title [title]="'Detalhe da Promoção'"></ba-title>
+        <ba-buttons-function [showButton]="{buttonRemove: true, buttonCheck: true}" (buttonClick)="functionButtonClick($event)"></ba-buttons-function>
+        <div class="ba-section" *ngIf="food">
+            <div class="section-body">
+                <div class="form-group ba-form-group ba-avatar-upload">
+                    <div class="avatar">
+                        <img src="{{food.image || defaultLogo}}" alt="">
+                    </div>
+                    <div class="file-name">
+                        {{logoName}}
+                    </div>
+                    <div class="button-groups">
+                        <button class="btn" [ngClass]='{"btn-default": !food.image, "btn-danger": food.image}' (click)="removeLogo()">
+                      <i class="fa fa-times"></i>
+                  </button>
+                        <div class="upload-button">
+                            <label for="selectImageBtn" class="ba-link btn btn-primary" (click)="chooseImage()"> 
+                                  <i class="fa fa-file-image-o "></i> 
+                          </label>
+                            <!-- <input type="file" id="selectImageBtn" name="selectImageBtn" accept="image/*" /> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ba-form-group">
+                    <label for="food-name">Nome:</label>
+                    <input type="text" name="food-name" id="food-name" [(ngModel)]="food.name" placeholder="Tên món ăn" class="form-control">
+                </div>
+                <div class="form-group ba-form-group">
+                    <label for="food-enname">English Name:</label>
+                    <input type="text" name="food-enname" id="food-enname" [(ngModel)]="food.enName" placeholder="Tên tiếng Anh" class="form-control">
+                </div>
+                <div class="form-group ba-form-group">
+                    <label for="food-description">Descrição:</label>
+                    <textarea name="desc" spellcheck="false" placeholder="Mô tả" #desc cols="30" rows="10" [(ngModel)]="food.description"></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group ba-form-group">
+                            <label for="code">Código da Promoção:</label>
+                            <input type="text" id="code" name="code" class="form-control" [(ngModel)]="food.code" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group ba-form-group">
+                            <label for="type">Tipo:</label>
+                            <select name="type" id="type" class="form-control" [(ngModel)]="food.type"> 
+                                  <option class="dropdown-item" value="{{type.code}}" *ngFor="let type of types; let i = index">{{type.name}}</option> 
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group ba-form-group">
+                            <label for="categories">Categoria:</label>
+                            <select name="categories" id="categories" class="form-control" [(ngModel)]="food.category"> 
+                                <option class="dropdown-item" value="{{category.code}}" *ngFor="let category of categories; let i = index" [selected]="i == 0">{{category.name}}</option> 
+                              </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group ba-form-group">
+                            <label for="state">Status:</label>
+                            <select name="state" id="state" class="form-control" [(ngModel)]="food.state"> 
+                                  <option class="dropdown-item" value="{{state.id}}" *ngFor="let state of foodStates; let i = index">{{state.value}}</option> 
+                                </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group ba-form-group">
+                            <label for="food-price">Preço</label>
+                            <input type="number" name="food-price" id="food-price" class="form-control" [(ngModel)]="food.price">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group ba-form-group">
+                            <label for="food-unit">Quantidade: </label>
+                            <input type="text" name="food-unit" id="food-unit" class="form-control" [(ngModel)]="food.unit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

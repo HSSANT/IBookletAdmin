@@ -1,0 +1,88 @@
+<ion-header>
+
+    <ion-toolbar color="primary">
+        <ion-buttons start left>
+            <button ion-button icon-only (click)="onClickBack()"><ion-icon name="ios-arrow-back-outline"></ion-icon></button>
+        </ion-buttons>
+        <ion-title>{{mTitle}}</ion-title>
+
+        <ion-buttons end>
+            <button ion-button clear (click)="onClickDone()">Xong</button>
+        </ion-buttons>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div class="folder-container">
+        <div class="folder-bar">
+            <div class="folder-bar-items">
+                <ion-icon name="folder-open" (click)="onClickFolderBar('')">
+                </ion-icon>
+                <div class="item-folder" *ngFor="let item of mFolderPaths" (click)="onClickFolderBar(item)">
+                    {{item}} /
+                </div>
+            </div>
+
+            <div class="folder-bar-buttons">
+
+                <button ion-button icon-only clear (click)="onClickNewFolder()">
+                      <ion-icon name="add"></ion-icon>
+                  </button>
+                <button ion-button icon-only clear style="position:relative">
+                      <ion-icon name="cloud-upload"></ion-icon>                    
+                      <input id="inputfile" type="file" class="input-file" multiple (change)="onFilesChanged($event)">                    
+                  </button>
+
+                <button ion-button icon-only clear (click)="onClickSwitchViewType(VIEW_LIST)">
+                      <ion-icon name="list" [class.btn-inactive]="mViewType!=VIEW_LIST"></ion-icon>
+                  </button>
+                <button ion-button icon-only clear (click)="onClickSwitchViewType(VIEW_GRID)">
+                      <ion-icon name="grid"  [class.btn-inactive]="mViewType!=VIEW_GRID"></ion-icon>
+                  </button>
+
+            </div>
+        </div>
+
+        <div class="folder-content-container">
+            <ion-list *ngIf="mViewType==VIEW_LIST">
+                <ion-item *ngFor="let category of mCurrentFolders" class="folder" (click)="onClickOpenFolder(category)" (contextmenu)="onRightClickFolder(category,$event)">
+                    <div style="display:flex; align-items:center">
+                        <ion-icon class="color-folder" name="folder" style="font-size: 2em; padding-right:10px"></ion-icon> {{category.folder_name}}</div>
+                </ion-item>
+                <ion-item *ngFor="let uploadedFile of mCurrentFiles" (contextmenu)="onRightClickFile(uploadedFile,$event)" (tap)="onTapFile(uploadedFile,$event)" [class.selected-file]="uploadedFile.mSelected">
+                    {{uploadedFile.name}}
+                </ion-item>
+            </ion-list>
+            <ion-grid *ngIf="mViewType==VIEW_GRID">
+                <ion-row>
+                    <ion-col col-4 col-md-2 col-lg-1 *ngFor="let category of mCurrentFolders" class="folder" (click)="onClickOpenFolder(category)" (contextmenu)="onRightClickFolder(category,$event)">
+                        <div style="width:100%">
+                            <div class="col-preview">
+                                <ion-icon class="color-folder" name="folder"></ion-icon>
+                            </div>
+                            <div class="col-name">{{category.folder_name}}</div>
+                        </div>
+                    </ion-col>
+
+                </ion-row>
+
+                <ion-row>
+                    <ion-col col-4 col-md-2 col-lg-1 *ngFor="let uploadedFile of mCurrentFiles" (contextmenu)="onRightClickFile(uploadedFile,$event)" (tap)="onTapFile(uploadedFile,$event)">
+                        <div style="width:100%" [class.preview-selected-file]="uploadedFile.mSelected">
+                            <div class="col-preview">
+                                <img [src]="uploadedFile.url">
+                            </div>
+                            <div class="col-name">{{uploadedFile.name}}</div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+
+    <div class="file-uploading" *ngIf="mFileUploading">
+        Đang tải lên {{mFileUploading.name}} .. <span class="upload-percent">{{mFileUploading.progress}} %</span>
+    </div>
+</ion-content>

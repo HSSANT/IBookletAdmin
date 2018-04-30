@@ -1,0 +1,48 @@
+<ion-header>
+    <ba-header></ba-header>
+</ion-header>
+
+<ion-content>
+    <div class="ba-content">
+        <ba-title [title]="'Promoções'"></ba-title>
+        <div class="main-controls">
+            <ba-buttons-function [showButton]="{buttonAdd: true, buttonImport: true}" (buttonClick)="functionButtonClick($event)"></ba-buttons-function>
+        </div>
+        <div class="ba-section">
+            <div class="section-body">
+                <div class="table table-responsive table-bordered">
+                    <table class="table">
+                        <tr>
+                            <th text-center>ID</th>
+                            <th>Nome</th>
+                            <th>Código</th>
+                            <th>Imagem</th>
+                            <th>Preço</th>
+                            <th>Status</th>
+                            <th>Ação</th>
+                        </tr>
+                        <tr *ngFor="let food of foods; let i = index">
+                            <td text-center>{{i+1}}</td>
+                            <td>{{food.name}}</td>
+                            <td>{{food.code}}</td>
+                            <td><img src="{{food.image}}" alt=""></td>
+                            <td>{{food.price | price}}</td>
+                            <td>{{food.state | foodState}}</td>
+                            <td>
+                                <button class="btn btn-success" (click)="gotoFoodDetail(food)">
+                              <i class="fa fa-pencil" aria-hidden="true"></i>
+                          </button>
+                                <button class="btn btn-danger" (click)="delete(food)">
+                              <i class="fa fa-trash" aria-hidden="true"></i>
+                          </button>
+                            </td>
+                        </tr>
+                        <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+                            <ion-infinite-scroll-content></ion-infinite-scroll-content>
+                        </ion-infinite-scroll>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,643 @@
+        // http://ionicframework.com/docs/theming/
+        // App Global Sass
+        // --------------------------------------------------
+        // Put style rules here that you want to apply globally. These
+        // styles are for the entire app and not just one component.
+        // Additionally, this file can be also used as an entry point
+        // to import other Sass files to be included in the output CSS.
+        //
+        // Shared Sass variables, which can be used to adjust Ionic's
+        // default Sass variables, belong in "theme/variables.scss".
+        //
+        // To declare rules for a specific mode, create a child rule
+        // for the .md, .ios, or .wp mode classes. The mode class is
+        // automatically applied to the <body> element in the app.
+        //icon-font
+        @font-face {
+            font-family: 'icomoon';
+            src: url('../assets/bistro-admin/fonts/icomoon.eot?qnd4g8');
+            src: url('../assets/bistro-admin/fonts/icomoon.eot?qnd4g8#iefix') format('embedded-opentype'), url('../assets/bistro-admin/fonts/icomoon.ttf?qnd4g8') format('truetype'), url('../assets/bistro-admin/fonts/icomoon.woff?qnd4g8') format('woff'), url('../assets/bistro-admin/fonts/icomoon.svg?qnd4g8#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        [class*="icon"][class*="ba-"] {
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        [class*="icon"][class$="ba-id_food_o"]:before {
+            content: "\e926";
+        }
+        
+        [class*="icon"][class$="ba-size_food_o]"]:before {
+            content: "\e927";
+        }
+        
+        [class*="icon"][class$="ba-money_o"]:before {
+            content: "\e928";
+        }
+        
+        [class*="icon"][class$="ba-plus"]:before {
+            content: "\e929";
+        }
+        
+        [class*="icon"][class$="ba-tick"]:before {
+            content: "\e92a";
+        }
+        
+        [class*="icon"][class$="ba-camera_o"]:before {
+            content: "\e92b";
+        }
+        
+        [class*="icon"][class$="ba-stack_o"]:before {
+            content: "\e92c";
+        }
+        
+        [class*="icon"][class$="ba-switch_o"]:before {
+            content: "\e92d";
+        }
+        
+        [class*="icon"][class$="ba-setting-o"]:before {
+            content: "\e92e";
+        }
+        
+        [class*="icon"][class$="ba-cash"]:before {
+            content: "\e922";
+        }
+        
+        [class*="icon"][class$="ba-door"]:before {
+            content: "\e923";
+        }
+        
+        [class*="icon"][class$="ba-stairs"]:before {
+            content: "\e924";
+        }
+        
+        [class*="icon"][class$="ba-wc"]:before {
+            content: "\e925";
+        }
+        
+        [class*="icon"][class$="ba-list-o"]:before {
+            content: "\e91f";
+        }
+        
+        [class*="icon"][class$="ba-map-o"]:before {
+            content: "\e920";
+        }
+        
+        [class*="icon"][class$="ba-order-number-o"]:before {
+            content: "\e921";
+        }
+        
+        [class*="icon"][class$="ba-phone-o"]:before {
+            content: "\e900";
+        }
+        
+        [class*="icon"][class$="ba-food-menu-o"]:before {
+            content: "\e901";
+        }
+        
+        [class*="icon"][class$="ba-menu-o"]:before {
+            content: "\e902";
+        }
+        
+        [class*="icon"][class$="ba-order-o"]:before {
+            content: "\e903";
+        }
+        
+        [class*="icon"][class$="ba-password-o"]:before {
+            content: "\e904";
+        }
+        
+        [class*="icon"][class$="ba-re-pass-o"]:before {
+            content: "\e905";
+        }
+        
+        [class*="icon"][class$="ba-table-3-o"]:before {
+            content: "\e906";
+        }
+        
+        [class*="icon"][class$="ba-bar"]:before {
+            content: "\e907";
+        }
+        
+        [class*="icon"][class$="ba-bell-o"]:before {
+            content: "\e908";
+        }
+        
+        [class*="icon"][class$="ba-book-table-o"]:before {
+            content: "\e909";
+        }
+        
+        [class*="icon"][class$="ba-couple-table"]:before {
+            content: "\e90a";
+        }
+        
+        [class*="icon"][class$="ba-family-table"]:before {
+            content: "\e90b";
+        }
+        
+        [class*="icon"][class$="ba-group-o"]:before {
+            content: "\e90c";
+        }
+        
+        [class*="icon"][class$="ba-home-2-o"]:before {
+            content: "\e90d";
+        }
+        
+        [class*="icon"][class$="ba-individual-o"]:before {
+            content: "\e90e";
+        }
+        
+        [class*="icon"][class$="ba-kitchen"]:before {
+            content: "\e90f";
+        }
+        
+        [class*="icon"][class$="ba-like"]:before {
+            content: "\e910";
+        }
+        
+        [class*="icon"][class$="ba-location-1-o"]:before {
+            content: "\e911";
+        }
+        
+        [class*="icon"][class$="ba-location-2-o"]:before {
+            content: "\e912";
+        }
+        
+        [class*="icon"][class$="ba-logo-dancer"]:before {
+            content: "\e913";
+            color: #000;
+        }
+        
+        [class*="icon"][class$="ba-note-o"]:before {
+            content: "\e914";
+        }
+        
+        [class*="icon"][class$="ba-question-o"]:before {
+            content: "\e915";
+        }
+        
+        [class*="icon"][class$="ba-sale-o"]:before {
+            content: "\e916";
+        }
+        
+        [class*="icon"][class$="ba-service-o"]:before {
+            content: "\e917";
+        }
+        
+        [class*="icon"][class$="ba-shipper-o"]:before {
+            content: "\e918";
+        }
+        
+        [class*="icon"][class$="ba-stairs-o"]:before {
+            content: "\e919";
+        }
+        
+        [class*="icon"][class$="ba-table"]:before {
+            content: "\e91a";
+        }
+        
+        [class*="icon"][class$="ba-table-o"]:before {
+            content: "\e91b";
+        }
+        
+        [class*="icon"][class$="ba-taxi-o"]:before {
+            content: "\e91c";
+        }
+        
+        [class*="icon"][class$="ba-time-o"]:before {
+            content: "\e91d";
+        }
+        
+        [class*="icon"][class$="ba-triangle"]:before {
+            content: "\e91e";
+        }
+        
+        .my-modal {
+            background-color: #123;
+            height: 50%;
+        }
+        
+        @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+        * {
+            font-family: 'Montserrat', "Open Sans", sans-serif;
+        }
+        
+        @-webkit-keyframes background {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+        
+        @-moz-keyframes background {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+        
+        @keyframes background {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+        
+         :focus,
+         :active {
+            outline: none !important;
+        }
+        
+        .scroll-content {
+            overflow: auto;
+        }
+        
+        .ba-pointer {
+            cursor: pointer;
+        }
+        
+        .ba-content {
+            padding: map-get($map: $BASizes, $key: defaultPadding);
+            padding-bottom: 4em;
+            color: map-get($map: $BAColors, $key: black);
+            margin-left: map-get($map: $BASizes, $key: lineHeight)*1.5;
+            margin-right: map-get($map: $BASizes, $key: lineHeight)*1.5;
+            margin-top: map-get($map: $BASizes, $key: lineHeight);
+            margin-bottom: map-get($map: $BASizes, $key: lineHeight);
+            min-height: calc(100% - #{map-get($map: $BASizes, $key: lineHeight )}*2);
+            background-color: map-get($map: $BAColors, $key: lightgray);
+            position: relative;
+            .ba-main-title {
+                text-transform: uppercase;
+                padding-left: 15px;
+                font-weight: bold;
+            }
+            .main-controls {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: map-get($map: $BASizes, $key: defaultPadding);
+                width: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .main-button-group {
+                margin: 5px 0 5px 5px;
+                text-align: right;
+            }
+            .ba-filter {
+                width: auto;
+                max-width: 100%;
+            }
+        }
+        
+        .ba-section {
+            margin: 15px 0;
+        }
+        
+        .bold {
+            font-weight: bold;
+        }
+        
+        .ba-bold {
+            font-weight: 500;
+        }
+        
+        .ba-small {
+            font-size: .8em;
+        }
+        
+        .ba-padding {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        .no-margin-vertical {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+        
+        .ba-form-group {
+            label {
+                white-space: nowrap;
+                font-weight: bold;
+            }
+            .form-control {
+                font-size: 1em;
+            }
+            select.form-control:not([size]):not([multiple]) {
+                height: 2.25em;
+            }
+        }
+        
+        .ck-editor__editable {
+            padding-top: 10px !important;
+            background-color: #FFF;
+        }
+        
+        .table {
+            .btn {
+                margin-bottom: 5px;
+            }
+            img {
+                max-width: 100px;
+            }
+        }
+        
+        .flexbox-center-cross {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .ba-flexbox {
+            display: flex;
+        }
+        
+        .ba-avatar-upload {
+            margin-top: 25px;
+            .avatar {
+                margin: 10px auto;
+                width: 200px;
+                min-height: 100px;
+                border: 1px solid #ddd;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+            .file-name {
+                width: 100%;
+                text-align: center;
+                padding: 10px 5px;
+            }
+            .button-groups {
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .btn,
+                button {
+                    margin: 0 5px;
+                }
+                .upload-button {
+                    display: inline-block;
+                    input {
+                        display: none;
+                    }
+                    label {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        
+        $headerHeight: 3 * map-get($map: $BASizes,
+        $key: lineHeight);
+        .ba-menu {
+            color: map-get($map: $BAColors, $key: white);
+            .ba-menu-header {
+                height: $headerHeight;
+                text-align: center;
+                font-size: 0.5*$headerHeight;
+                background-color: map-get($map: $BAColors, $key: primary);
+                line-height: $headerHeight;
+            }
+            .ba-menu-content {
+                background-color: map-get($map: $BAColors, $key: primary);
+                .ba-menu-item {
+                    height: 2 * map-get($map: $BASizes, $key: lineHeight);
+                    line-height: 2 * map-get($map: $BASizes, $key: lineHeight);
+                    font-size: 1em;
+                    color: map-get($map: $BAColors, $key: white);
+                    display: flex;
+                    &.active,
+                    &:hover {
+                        background-color: #98262e;
+                        border-left: solid 6px map-get($BAColors, yellow);
+                        font-weight: bold;
+                    }
+                    .icon {
+                        width: 2 * map-get($map: $BASizes, $key: lineHeight);
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 10px;
+                        font-size: .9em;
+                    }
+                }
+            }
+        }
+        
+        .ba-form {
+            padding: 15px map-get($BASizes, paddingRight) 15px map-get($BASizes, defaultPadding);
+            $inputHeight: 2.5em;
+            $divPadding: 6px;
+            background-color: #f9f9f9;
+            margin: 0 0 20px 0;
+            .validate-message {
+                margin-top: 5px;
+                display: block;
+                color: map-get($BAColors, gray);
+                text-align: center;
+            }
+            ion-datetime {
+                position: absolute;
+                top: $divPadding;
+                left: $divPadding;
+                height: $inputHeight;
+                width: 1.5*$inputHeight;
+                z-index: 10;
+                .datetime-text {
+                    display: none;
+                }
+            }
+            .input-div {
+                display: flex;
+                position: relative;
+                padding: $divPadding;
+            }
+            .text-input {
+                width: 100%;
+                border: solid 1px map-get($BAColors, lightgray);
+                border-radius: 5px;
+                line-height: $inputHeight;
+                padding-left: 1*$inputHeight;
+                text-align: center;
+                color: map-get($BAColors, black);
+                margin: 0;
+                padding-right: 10px;
+                background-color: map-get($BAColors, white);
+            }
+            ion-textarea {
+                .text-input {
+                    border-radius: 10px !important;
+                    height: 3 * $inputHeight !important;
+                }
+            }
+            .icon {
+                position: absolute;
+                top: $divPadding + 1px;
+                left: $divPadding + 1px;
+                height: $inputHeight;
+                color: map-get($BAColors, primary);
+                width: 1.5*$inputHeight;
+                line-height: $inputHeight;
+                text-align: center;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: map-get($map: $BAColors, $key: white);
+                border-radius: 5px;
+                img {
+                    width: 0.5 * $inputHeight;
+                    height: 0.5 * $inputHeight;
+                    margin: auto;
+                }
+            }
+            .button-right {
+                position: absolute;
+                top: $divPadding;
+                right: $divPadding;
+                height: $inputHeight;
+                color: map-get($BAColors, primary);
+                width: 1.5*$inputHeight;
+                line-height: $inputHeight;
+                text-align: center;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .ng-invalid:not(form) {
+                border-color: rgba(187, 42, 50, 0.69);
+                .text-input {
+                    border-color: rgba(187, 42, 50, 0.69);
+                }
+            }
+        }
+        
+        .ba-form-center {
+            margin: auto;
+        }
+        
+        .ba-link {
+            cursor: pointer;
+        }
+        
+        .ba-button {
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: map-get($BAColors, white);
+            background-color: map-get($BAColors, primary);
+        }
+        
+        .ba-button,
+        .ba-button-outline {
+            &:hover {
+                background: linear-gradient(-45deg, map-get($map: $BAColors, $key: blue), map-get($map: $BAColors, $key: primary));
+                background-size: 200% 200%;
+                -webkit-animation: background 2s ease infinite;
+                -moz-animation: background 2s ease infinite;
+                animation: background 2s ease infinite;
+            }
+        }
+        
+        .ba-button-outline {
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: map-get($BAColors, primary);
+            background-color: map-get($BAColors, white);
+            border: solid 1px;
+        }
+        
+        .ng-touched.ng-invalid:not(form) {
+            .text-input {
+                border-color: rgba(187, 43, 51, 0.6);
+            }
+        }
+        
+        .ng-touched.ng-valid:not(form) {
+            .text-input {
+                border-color: map-get($BAColors, gray);
+                color: map-get($BAColors, gray);
+            }
+        }
+        
+        .validate-message {
+            margin-top: 5px;
+            display: block;
+            color: gray;
+        }
+        
+        //Style for desktop and above
+        @media (min-width: 768px) {
+            .ba-title {
+                margin-bottom: 3em;
+                max-width: 50%;
+            }
+            .ba-content {
+                .main-controls {
+                    max-width: 50%;
+                }
+            }
+        }
+        
+        //Style for tablet and above
+        @media(min-width: 576px) {}
+        
+        //Style for only mobile
+        @media(max-width: 576px) {
+            .ba-content {
+                margin: 0;
+            }
+        }
+        
+        //Style for tablet and below
+        @media (max-width: 768px) {
+            .ba-flexbox {
+                flex-wrap: wrap;
+            }
+            .ba-content {
+                .main-controls {
+                    position: relative;
+                    text-align: right;
+                    padding: 0;
+                }
+            }
+        }

@@ -1,0 +1,1167 @@
+{
+    "result": 1,
+    "content": [{
+            "components": [
+
+            ],
+            "numberOfElement": { "table": 21, "wc": 2, "door": 3, "bar": 1, "receptionist": 1, "area": 1 },
+            "currentWidth": 665,
+            "currentHeight": 443,
+            "id": 1,
+            "floorId": 1,
+            "title": "Sơ đồ ngày thường"
+        },
+        {
+            "components": [{
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 1,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 1",
+                    "x": 551.7078534031414,
+                    "y": 162.67748691099476,
+                    "width": 49.546875,
+                    "height": 48.984375
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-wc"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 2,
+                    "type": {
+                        "type": "wc",
+                        "name": "Nhà vệ sinh"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Nhà vệ sinh 1",
+                    "x": -2,
+                    "y": 273.5,
+                    "width": 72,
+                    "height": 64
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-door"
+                    ],
+                    "zIndex": "10",
+                    "rotate": 0,
+                    "id": 3,
+                    "type": {
+                        "type": "door",
+                        "name": "Cửa"
+                    },
+                    "typeName": "",
+                    "innerHtml": "<div class=\"barrier left\"> </div>\n                        <div class=\"part left\"></div>\n                        <div class=\"part right\"></div>\n                        <div class=\"barrier right\"></div>",
+                    "title": "Cửa chính",
+                    "x": 532,
+                    "y": 274,
+                    "width": 72,
+                    "height": 63
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-wc"
+                    ],
+                    "zIndex": "10",
+                    "rotate": 0,
+                    "id": 4,
+                    "type": {
+                        "type": "wc",
+                        "name": "Nhà vệ sinh"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Nhà vệ sinh 2",
+                    "x": 604.75,
+                    "y": -2,
+                    "width": 72,
+                    "height": 64
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-bar"
+                    ],
+                    "zIndex": "10",
+                    "rotate": 0,
+                    "id": 5,
+                    "type": {
+                        "type": "bar",
+                        "name": "Quầy bar"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Quầy bar",
+                    "x": 152,
+                    "y": 272,
+                    "width": 188,
+                    "height": 64
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-receptionist"
+                    ],
+                    "zIndex": "10",
+                    "rotate": 0,
+                    "id": 6,
+                    "type": {
+                        "type": "receptionist",
+                        "name": "Thu ngân"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Thu ngân",
+                    "x": 419,
+                    "y": 273,
+                    "width": 72,
+                    "height": 63
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 7,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 2",
+                    "x": 72,
+                    "y": 138,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 8,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 3",
+                    "x": 13,
+                    "y": 139,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 9,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 4",
+                    "x": 13,
+                    "y": 70,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 10,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 5",
+                    "x": 72,
+                    "y": 70,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 11,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 6",
+                    "x": 213,
+                    "y": 23,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 12,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 7",
+                    "x": 287,
+                    "y": 22,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 13,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 8",
+                    "x": 363,
+                    "y": 22,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 14,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 9",
+                    "x": 438,
+                    "y": 20,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 15,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 10",
+                    "x": 510,
+                    "y": 20,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 16,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 11",
+                    "x": 179,
+                    "y": 161,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 17,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 12",
+                    "x": 255,
+                    "y": 162,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 18,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 13",
+                    "x": 325,
+                    "y": 162,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 19,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 14",
+                    "x": 403,
+                    "y": 163,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 20,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 15",
+                    "x": 479,
+                    "y": 162,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 21,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 16",
+                    "x": 178,
+                    "y": 97,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 22,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 17",
+                    "x": 254,
+                    "y": 96,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 23,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 18",
+                    "x": 324,
+                    "y": 96,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 24,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 19",
+                    "x": 401,
+                    "y": 97,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 25,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 20",
+                    "x": 478,
+                    "y": 98,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 26,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 21",
+                    "x": 552,
+                    "y": 98,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-area"
+                    ],
+                    "zIndex": "9",
+                    "rotate": 0,
+                    "id": 27,
+                    "type": {
+                        "type": "area",
+                        "name": "Khu vực"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Phòng VIP",
+                    "x": -2,
+                    "y": -2,
+                    "width": 135,
+                    "height": 230
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-door"
+                    ],
+                    "zIndex": "10",
+                    "rotate": 270,
+                    "id": 28,
+                    "type": {
+                        "type": "door",
+                        "name": "Cửa"
+                    },
+                    "typeName": "",
+                    "innerHtml": "<div class=\"barrier left\"> </div>\n                        <div class=\"part left\"></div>\n                        <div class=\"part right\"></div>\n                        <div class=\"barrier right\"></div>",
+                    "title": "Cửa",
+                    "x": 92,
+                    "y": 19,
+                    "width": 50,
+                    "height": 30
+                }
+            ],
+            "numberOfElement": {
+                "table": 21,
+                "wc": 2,
+                "door": 2,
+                "bar": 1,
+                "receptionist": 1,
+                "area": 1
+            },
+            "currentWidth": 679,
+            "currentHeight": 340,
+            "id": 2,
+            "floorId": 1,
+            "title": "Sơ đồ ngày cuối tuần"
+        },
+        {
+            "components": [{
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 1,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 1",
+                    "x": 551.7078534031414,
+                    "y": 162.67748691099476,
+                    "width": 49.546875,
+                    "height": 48.984375
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-wc"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 2,
+                    "type": {
+                        "type": "wc",
+                        "name": "Nhà vệ sinh"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Nhà vệ sinh 1",
+                    "x": -2,
+                    "y": 273.5,
+                    "width": 72,
+                    "height": 64
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-door"
+                    ],
+                    "zIndex": "10",
+                    "rotate": 0,
+                    "id": 3,
+                    "type": {
+                        "type": "door",
+                        "name": "Cửa"
+                    },
+                    "typeName": "",
+                    "innerHtml": "<div class=\"barrier left\"> </div>\n                        <div class=\"part left\"></div>\n                        <div class=\"part right\"></div>\n                        <div class=\"barrier right\"></div>",
+                    "title": "Cửa chính",
+                    "x": 532,
+                    "y": 274,
+                    "width": 72,
+                    "height": 63
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-wc"
+                    ],
+                    "zIndex": "10",
+                    "rotate": 0,
+                    "id": 4,
+                    "type": {
+                        "type": "wc",
+                        "name": "Nhà vệ sinh"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Nhà vệ sinh 2",
+                    "x": 604.75,
+                    "y": -2,
+                    "width": 72,
+                    "height": 64
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-bar"
+                    ],
+                    "zIndex": "10",
+                    "rotate": 0,
+                    "id": 5,
+                    "type": {
+                        "type": "bar",
+                        "name": "Quầy bar"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Quầy bar",
+                    "x": 152,
+                    "y": 272,
+                    "width": 188,
+                    "height": 64
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-receptionist"
+                    ],
+                    "zIndex": "10",
+                    "rotate": 0,
+                    "id": 6,
+                    "type": {
+                        "type": "receptionist",
+                        "name": "Thu ngân"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Thu ngân",
+                    "x": 419,
+                    "y": 273,
+                    "width": 72,
+                    "height": 63
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 7,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 2",
+                    "x": 72,
+                    "y": 138,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 8,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 3",
+                    "x": 13,
+                    "y": 139,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 9,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 4",
+                    "x": 13,
+                    "y": 70,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 10,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 5",
+                    "x": 72,
+                    "y": 70,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 11,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 6",
+                    "x": 213,
+                    "y": 23,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 12,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 7",
+                    "x": 287,
+                    "y": 22,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 13,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 8",
+                    "x": 363,
+                    "y": 22,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 14,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 9",
+                    "x": 438,
+                    "y": 20,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 15,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 10",
+                    "x": 510,
+                    "y": 20,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 16,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 11",
+                    "x": 179,
+                    "y": 161,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 17,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 12",
+                    "x": 255,
+                    "y": 162,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 18,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 13",
+                    "x": 325,
+                    "y": 162,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 19,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 14",
+                    "x": 403,
+                    "y": 163,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 20,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 15",
+                    "x": 479,
+                    "y": 162,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 21,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 16",
+                    "x": 178,
+                    "y": 97,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 22,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 17",
+                    "x": 254,
+                    "y": 96,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 23,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 18",
+                    "x": 324,
+                    "y": 96,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 24,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 19",
+                    "x": 401,
+                    "y": 97,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 25,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 20",
+                    "x": 478,
+                    "y": 98,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-table"
+                    ],
+                    "zIndex": 10,
+                    "rotate": 0,
+                    "id": 26,
+                    "type": {
+                        "type": "table",
+                        "name": "Bàn"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Bàn 21",
+                    "x": 552,
+                    "y": 98,
+                    "width": 50,
+                    "height": 50
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-area"
+                    ],
+                    "zIndex": "9",
+                    "rotate": 0,
+                    "id": 27,
+                    "type": {
+                        "type": "area",
+                        "name": "Khu vực"
+                    },
+                    "typeName": "",
+                    "innerHtml": "",
+                    "title": "Phòng VIP",
+                    "x": -2,
+                    "y": -2,
+                    "width": 135,
+                    "height": 230
+                },
+                {
+                    "classList": [
+                        "map-symbol",
+                        "ui-door"
+                    ],
+                    "zIndex": "10",
+                    "rotate": 270,
+                    "id": 28,
+                    "type": {
+                        "type": "door",
+                        "name": "Cửa"
+                    },
+                    "typeName": "",
+                    "innerHtml": "<div class=\"barrier left\"> </div>\n                        <div class=\"part left\"></div>\n                        <div class=\"part right\"></div>\n                        <div class=\"barrier right\"></div>",
+                    "title": "Cửa",
+                    "x": 92,
+                    "y": 19,
+                    "width": 50,
+                    "height": 30
+                }
+            ],
+            "numberOfElement": {
+                "table": 21,
+                "wc": 2,
+                "door": 2,
+                "bar": 1,
+                "receptionist": 1,
+                "area": 1
+            },
+            "currentWidth": 679,
+            "currentHeight": 340,
+            "id": 3,
+            "floorId": 1,
+            "title": "Sơ đồ ngày lễ"
+        }
+    ]
+}

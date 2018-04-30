@@ -1,0 +1,25 @@
+<ion-header>
+    <ba-header></ba-header>
+</ion-header>
+<ion-content>
+    <div class="ba-content">
+        <ba-title [title]="'Dashboard'"></ba-title>
+        <div class="sumary">
+            <div class="sumary-item col-md-3 col-sm-6 col-xs-12" *ngFor="let sumary of sumaryItems">
+                <div class="item-container">
+                    <div class="icon">
+                        <i class="fa fa-{{sumary.icon}}" aria-hidden="true"></i>
+                    </div>
+                    <div class="content">
+                        <span class="number">{{sumary.number.toLocaleString()}}</span>
+                        <span class="text">{{sumary.text}}</span>
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="chart-container col-md-8 col-sm-10 col-xs-12">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,87 @@
+<ion-header>
+    <ba-header></ba-header>
+</ion-header>
+
+<ion-content>
+    <div class="ba-content">
+        <ba-title [title]="'Mapa da Loja ' + restName + ': ' + selectedMap.title"></ba-title>
+        <div class="main-controls">
+            <ba-buttons-function [showButton]="{buttonRemove: true, buttonCheck: true, buttonEdit: true}" (buttonClick)="functionButtonClick($event)"></ba-buttons-function>
+        </div>
+        <div class="message" *ngIf="!showEditor" text-center>
+            Este recurso não é suportado em tablets ou telefones celulares. Convido você para experimentar em um computador com uma tela maior.
+        </div>
+        <div class="restaurant-map" *ngIf="showEditor">
+            <div class="left-side-bar col-md-3 col-sm-12">
+                <ul class="list-group component-list">
+                    <li class="list-group-item component-type" *ngFor="let componentType of componentTypes" [attr.component]="componentType.type">
+                        {{componentType.name}}
+                        <span class="btn btn-primary float-right" (click)="addButtonClick(componentType)">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                </ul>
+                <div class="action-buttons" *ngIf="selectedComponent">
+                    <button class="btn btn-success" (click)="edit()">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-info" (click)="chooseTable()" *ngIf="selectedComponent.type.type == 'table'">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-primary" (click)="rotate()">
+                        <i class="fa fa-repeat" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-warning" (click)="upIndex()">
+                        <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-dark" (click)="downIndex()">
+                        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-info" (click)="copy()">
+                        <i class="fa fa-copy" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-danger" (click)="delete()">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                    <ion-list class="component-detail" no-lines>
+                        <ion-item>
+                            <ion-label class="ba-small bold" item-left>Título:</ion-label>
+                            <ion-label item-right>{{selectedComponent.table ? selectedComponent.table.name : (selectedComponent.title || selectedComponent.typeName)}}</ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label class="ba-small bold" item-left>Tamanho:</ion-label>
+                            <ion-label item-right>{{selectedComponent.width + 'x' + selectedComponent.height}}</ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label class="ba-small bold" item-left>Localização:</ion-label>
+                            <ion-label item-right>{{selectedComponent.x + 'x' + selectedComponent.y}}</ion-label>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label class="ba-small bold" item-left>Altura:</ion-label>
+                            <ion-label item-right>{{selectedComponent.zIndex}}</ion-label>
+                        </ion-item>
+                    </ion-list>
+                </div>
+            </div>
+            <div class="right-side-bar col-md-9  col-sm-12" id="map-zone">
+                <span class="long">{{longSize}}</span>
+                <span class="short">{{shortSize}}</span>
+                <div [ngClass]="component.classList" *ngFor="let component of selectedMap.components; let i = index" [attr.index]="i" [style.transform]="domSanitizer.bypassSecurityTrustStyle('translate(' + component.x + 'px,' + component.y + 'px) ' + 'rotateZ('+ component.rotate +'deg)')"
+                    [style.webkitTransform]="domSanitizer.bypassSecurityTrustStyle('translate(' + component.x + 'px,' + component.y + 'px) ' + 'rotateZ('+ component.rotate +'deg)')" [attr.data-x]="component.x" [attr.data-y]="component.y" [style.width]="component.width + 'px'"
+                    [style.height]="component.height + 'px'" [style.zIndex]="component.zIndex" (click)="selectComponent(component)" [class.selected]="selectedComponent && selectedComponent.id == component.id">
+                    <div class="title">
+                        <span> 
+                            {{component.table ? component.table.name : component.title}}
+                        </span>
+                    </div>
+                    <div class="content" [innerHTML]="component.innerHtml"></div>
+                    <div class="top-rule rule"></div>
+                    <div class="left-rule rule"></div>
+                    <div class="bottom-rule rule"></div>
+                    <div class="right-rule rule"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+<script src="assets/js/interact.min.js"></script>

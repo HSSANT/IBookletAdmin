@@ -1,0 +1,60 @@
+page-ba-dashboard {
+    $sumaryItemHeight: 4 * map-get($map: $BASizes, $key: lineHeight);
+    $sumaryItemColors: (map-get($map: $BAColors, $key: blue), map-get($map: $BAColors, $key: orange), map-get($map: $BAColors, $key: green), map-get($map: $BAColors, $key: yellow), map-get($map: $BAColors, $key: red));
+    $repeat: 5;
+    @for $i from 1 through $repeat {
+        .sumary>.sumary-item:nth-child(#{length($sumaryItemColors)}n+#{$i}) {
+            .icon {
+                background-color: nth($sumaryItemColors, $i) !important;
+            }
+        }
+    }
+    li {
+        list-style: none;
+        padding: 1em;
+    }
+    .sumary {
+        margin: 20px 0;
+        .sumary-item {
+            float: left;
+            margin-bottom: 15px;
+            .item-container {
+                background-color: map-get($map: $BAColors, $key: white);
+                width: 100%;
+                display: flex;
+                min-height: $sumaryItemHeight;
+                .icon {
+                    width: 40%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 2em;
+                    color: map-get($map: $BAColors, $key: white);
+                    background-color: map-get($map: $BAColors, $key: blue);
+                }
+                .content {
+                    width: 60%;
+                    .number {
+                        font-weight: bold;
+                        font-size: 1.5em;
+                        width: 100%;
+                        padding: 5px 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .text {
+                        font-size: 1.1em;
+                        width: 100%;
+                        text-align: center;
+                        display: block;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .chart-container {
+        margin: 20px auto;
+    }
+}

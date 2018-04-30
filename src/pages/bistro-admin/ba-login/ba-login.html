@@ -1,0 +1,47 @@
+<ion-content>
+    <ba-title [title]="'Đăng nhập'" [showTitle]="false"></ba-title>
+    <div class="ba-register-form col col-md-5 col-sm-7 col-xs-12">
+        <div class="logo">
+            <img src="assets/bistro-admin/images/logo.png" alt="">
+        </div>
+        <form (ngSubmit)="login()" [formGroup]="loginForm">
+            <div class="ba-form">
+                <div class="input-div">
+                    <span class="icon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </span>
+                    <ion-input type="tel" [(ngModel)]="phone" formControlName="phone" placeholder="telefone" (ionChange)="checkForm()"></ion-input>
+                </div>
+                <span *ngIf="!loginForm.controls.phone.valid && isSubmitted" class="validate-message">{{phoneErrorMessage}}</span>
+                <div class="input-div">
+                    <span class="icon">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </span>
+                    <ion-input type="password" [(ngModel)]="password" formControlName="password" placeholder="Senha" (ionChange)="checkForm()"></ion-input>
+                </div>
+                <span *ngIf="!loginForm.controls.password.valid && isSubmitted" class="validate-message">{{passwordErrorMessage}}</span>
+            </div>
+            <div class="login-button">
+                <button class="ba-button" type="submit">
+                    Login
+                </button>
+            </div>
+        </form>
+        <!-- <div class="divider">
+            <div class="line"></div>
+            <span class="divider-text">hoặc</span>
+        </div>
+        <div class="social-login">
+            <span class="social-button facebook-button">
+                          <i class="fa fa-facebook" aria-hidden="true"></i>
+                      </span>
+            <span class="social-button google-button">
+                          <i class="fa fa-google-plus" aria-hidden="true"></i>
+                      </span>
+        </div> -->
+
+        <div class="register-button">
+            <span class="ba-link" (tap)="gotoRegister()">Registrar</span>
+        </div>
+    </div>
+</ion-content>

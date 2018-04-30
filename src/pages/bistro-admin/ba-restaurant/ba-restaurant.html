@@ -1,0 +1,76 @@
+<ion-header>
+    <ba-header></ba-header>
+</ion-header>
+
+
+<ion-content>
+    <div class="ba-content">
+        <ba-title [title]="'Lojas'"></ba-title>
+        <div class="main-controls">
+            <ba-buttons-function [showButton]="{buttonAdd: true}" (buttonClick)="functionButtonClick($event)"></ba-buttons-function>
+        </div>
+        <div class="ba-section">
+            <div class="section-body">
+                <div class="table table-responsive table-bordered">
+                    <table class="table">
+                        <tr>
+                            <th text-center>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Cidade</th>
+                            <th>Logo</th>
+                            <th>Status</th>
+                            <th>Ação</th>
+                        </tr>
+                        <tr *ngFor="let restaurant of restaurants; let i = index">
+                            <td text-center>{{i+1}}</td>
+                            <td>{{restaurant.name}}</td>
+                            <td>{{restaurant.email}}</td>
+                            <td>{{restaurant.address}}</td>
+                            <td text-center>
+                                <img src="assets/bistro-admin/images/logo.png" alt="Logo">
+                            </td>
+                            <td>Trabalho</td>
+                            <td>
+                                <button class="btn btn-success" (click)="gotoRestaurantDetail(restaurant.id)">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                </button>
+                                <button class="btn btn-primary" (click)="gotoMap(restaurant)">
+                                    <i class="fa fa-map" aria-hidden="true"></i>
+                                </button>
+                                <button class="btn btn-warning" (click)="gotoTable(restaurant)">
+                                    <ion-icon name="ba-table-3-o"></ion-icon>
+                                </button>
+                                <button class="btn btn-danger" (click)="delete(restaurant)">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="section-footer">
+                <ul class="pagination pagination-lg">
+                    <li class="page-item disabled">
+                        <span class="page-link">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                    <li class="page-item"><span class="page-link" href="#">1</span></li>
+                    <li class="page-item active">
+                        <span class="page-link">
+                            2
+                            <span class="sr-only">(current)</span>
+                        </span>
+                    </li>
+                    <li class="page-item"><span class="page-link" href="#">3</span></li>
+                    <li class="page-item">
+                        <span class="page-link" href="#">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</ion-content>

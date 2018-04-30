@@ -1,0 +1,93 @@
+<div class="ba-header">
+    <div class="header-left">
+        <span class="header-button ba-pointer" menuToggle>
+          <i class="fa fa-bars" aria-hidden="true"></i>
+      </span>
+    </div>
+    <div class="header-main" #headerMain>
+        <div class="search-bar" *ngIf="showSearchBar" #searchBar>
+            <span class="search-button ba-pointer" #searchButton>
+                <i class="fa fa-search search" aria-hidden="true"></i>
+                <i class="fa fa-times cancel" aria-hidden="true"></i>
+            </span>
+            <input #searchInput type="text" class="search-input" placeholder="{{placeholder}}" />
+        </div>
+    </div>
+    <div class="header-right">
+        <div [class.active]="showOverlay=='inbox'" class="message header-button ba-pointer" (click)="toggleActive('inbox')">
+            <div class="button-content">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <span class="bagde">3</span>
+            </div>
+            <div class="overlay-content" (click)="onOverlayClick()">
+                <div class="overlay-header">
+                    <span>Você tem 3 mensagens</span>
+                </div>
+                <div class="overlay-body">
+                    <div class="overlay-item">
+                        <span>Cliente pediu por telefone</span>
+                    </div>
+                    <div class="overlay-item">
+                        <span>Cliente enviou um feedback</span>
+                    </div>
+                    <div class="overlay-item">
+                        <span>Importar novas entregas</span>
+                    </div>
+                    <div class="overlay-item">
+                        <span>Revendas</span>
+                    </div>
+                    <div class="overlay-item">
+                        <span>Cozinha lotada</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div [class.active]="showOverlay=='notification'" class="notification header-button ba-pointer" (click)="toggleActive('notification')">
+            <div class="button-content">
+                <i class="fa fa-bell" aria-hidden="true"></i>
+                <span class="bagde">5</span>
+            </div>
+            <div class="overlay-content" (click)="onOverlayClick()">
+                <div class="overlay-header">
+                    <span>Você tem 5 novas mensagens</span>
+                </div>
+                <div class="overlay-body">
+                    <div class="overlay-item">
+                        <span>mensgem 1</span>
+                    </div>
+                    <div class="overlay-item">
+                        <span>mensagem 2</span>
+                    </div>
+                    <div class="overlay-item">
+                        <span>mensagem 3</span>
+                    </div>
+                    <div class="overlay-item">
+                        <span>mensagem 4</span>
+                    </div>
+                    <div class="overlay-item">
+                        <span>mensagem 5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div [class.active]="showOverlay=='avatar'" class="avatar ba-pointer" (click)="toggleActive('avatar')">
+            <img src="assets/bistro-admin/images/avatar-placeholder.png" alt="Avatar">
+            <div class="overlay-content" (click)="onOverlayClick()">
+                <div class="overlay-header">
+                    <span>Conta</span>
+                </div>
+                <div class="overlay-body">
+                    <div class="overlay-item">
+                        <span>Informações da conta</span>
+                    </div>
+                    <div class="overlay-item">
+                        <span>Alterar senha</span>
+                    </div>
+                </div>
+                <div class="overlay-footer" (click)="logOut()">
+                    <span class="btn-logout ba-pointer">Log out</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

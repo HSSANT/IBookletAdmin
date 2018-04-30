@@ -1,0 +1,26 @@
+page-ba-vendor {
+    .ba-section {
+        .section-body {
+            .vendor-image {
+                margin: 20px auto;
+                max-width: 150px;
+                display: flex;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+            .vendor-name {
+                width: 100%;
+                text-align: center;
+                font-weight: bold;
+                font-size: 2em;
+            }
+            .vendor-desc {
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+    }
+}

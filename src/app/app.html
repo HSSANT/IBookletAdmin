@@ -1,0 +1,18 @@
+<ion-menu class="ba-menu" [content]="nav" swipeEnabled="false">
+    <ion-header class="ba-menu-header">
+        <span class="vendor">
+                Bistro Dancer
+        </span>
+    </ion-header>
+    <ion-content class="ba-menu-content">
+        <div class="ba-menu-item ba-pointer" [class.active]="item.active" *ngFor="let item of menuItems" (click)="gotoMenu(item)">
+            <span class="icon" [innerHTML]="item.icon">                
+            </span>
+            <span class="title">
+                {{item.title}}
+            </span>
+        </div>
+    </ion-content>
+</ion-menu>
+<ba-progress></ba-progress>
+<ion-nav #nav [root]="rootPage"></ion-nav>

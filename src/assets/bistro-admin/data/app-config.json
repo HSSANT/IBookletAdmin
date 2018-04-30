@@ -1,0 +1,55 @@
+{
+    "version": "1.0",
+    "menu-items": [{
+            "icon": "<i class='fa fa-home' aria-hidden='true'></i>",
+            "title": "Dashboard",
+            "page": "BaDashboardPage",
+            "link": "ba-dashboard",
+            "active": false
+        },
+        {
+            "icon": "<i class='fa fa-suitcase' aria-hidden='true'></i>",
+            "title": "Trademark",
+            "page": "BaVendorPage",
+            "link": "ba-vendor",
+            "active": false
+        },
+        {
+            "icon": "<i class='fa fa-building' aria-hidden='true'></i>",
+            "title": "Loja",
+            "page": "BaRestaurantPage",
+            "link": "ba-restaurant",
+            "active": false
+        },
+        {
+            "icon": "<i class='fa fa-male' aria-hidden='true'></i>",
+            "title": "Funcionários",
+            "page": "BaStaffPage",
+            "link": "ba-staff",
+            "active": false
+        },
+        {
+            "icon": "<i class='fa fa-user' aria-hidden='true'></i>",
+            "title": "Clientes"
+        },
+        {
+            "icon": "<i class='fa fa-cutlery' aria-hidden='true'></i>",
+            "title": "Menu",
+            "page": "BaFoodsPage",
+            "link": "ba-foods",
+            "active": false
+        },
+        {
+            "icon": "<i class='fa fa-bell' aria-hidden='true'></i>",
+            "title": "O Pedido"
+        },
+        {
+            "icon": "<i class='fa fa-gift' aria-hidden='true'></i>",
+            "title": "Promoções"
+        },
+        {
+            "icon": "<i class='fa fa-money' aria-hidden='true'></i>",
+            "title": "Renda"
+        }
+    ]
+}

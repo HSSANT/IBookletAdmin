@@ -1,0 +1,82 @@
+<ion-header>
+    <ba-header></ba-header>
+</ion-header>
+
+<ion-content>
+    <div class="ba-content">
+        <ba-title [title]="'Mapa da Loja ' + restaurantName"></ba-title>
+        <div class="main-controls">
+            <ba-buttons-function [showButton]="{buttonAdd: true}" (buttonClick)="functionButtonClick($event)"></ba-buttons-function>
+        </div>
+        <div class="ba-section">
+            <div class="section-header">
+                <div class="form-group ba-form-group">
+                    <label for="restaurant">Nome:</label>
+                    <div class="btn-group group-dropdown">
+                        <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  {{selectedRestaurant ? selectedRestaurant.name : "Selecione um Restaurante"}}
+                                </button>
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" *ngFor="let restaurant of restaurants" (click)="selectRestaurant(restaurant)">{{restaurant.name}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-body">
+                <div text-center padding *ngIf="floors.length == 0">
+                   Você ainda não adicionou nada.<br><br>
+                    <button class="btn btn-primary" (click)="addFloor()">Adicionar Andar</button>
+                </div>
+                <div *ngIf="floors.length > 0" class="table table-responsive table-bordered">
+                    <table class="table">
+                        <tr>
+                            <th text-center>ID</th>
+                            <th>Nome</th>
+                            <th>Loja</th>
+                            <th>Ação</th>
+                        </tr>
+                        <tr *ngFor="let floor of floors; let i = index">
+                            <td text-center>{{i+1}}</td>
+                            <td>{{floor.name}}</td>
+                            <td>{{selectedRestaurant.name}}</td>
+                            <td>
+                                <button class="btn btn-success" (click)="editFloor(floor)">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                </button>
+                                <button class="btn btn-primary" (click)="gotoMap(floor)">
+                                    <i class="fa fa-map" aria-hidden="true"></i>
+                                </button>
+                                <button class="btn btn-danger" (click)="delete(floor)">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-footer" *ngIf="floors.length > 0">
+                <ul class="pagination pagination-lg">
+                    <li class="page-item disabled">
+                        <span class="page-link">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                            </span>
+                    </li>
+                    <li class="page-item"><span class="page-link" href="#">1</span></li>
+                    <li class="page-item active">
+                        <span class="page-link">
+                                    2
+                                    <span class="sr-only">(current)</span>
+                        </span>
+                    </li>
+                    <li class="page-item"><span class="page-link" href="#">3</span></li>
+                    <li class="page-item">
+                        <span class="page-link" href="#">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,249 @@
+page-restaurant-map-maker {
+    .restaurant-map {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        top: 80px;
+        // top: auto;
+        bottom: 16px;
+        display: flex;
+        overflow-y: auto;
+        .left-side-bar {
+            float: left;
+            overflow-x: visible;
+            padding-left: 0;
+            .component-list {
+                .component-type {
+                    &.dragging {
+                        background-color: map-get($map: $BAColors, $key: lightgray);
+                        z-index: 1;
+                    }
+                }
+            }
+            .action-buttons {
+                width: 100%;
+                margin: 15px 0;
+                text-align: center;
+                .btn {
+                    margin: 3px;
+                }
+                .component-detail {
+                    margin-top: 10px;
+                }
+            }
+        }
+        #map-zone {
+            position: relative;
+            background-color: map-get($map: $BAColors, $key: white);
+            border: dashed 2px transparent;
+            transition: transform 1s, border 1s;
+            &.larger-map {
+                transform: translate(50%, 50%) scale(2);
+                border: dashed 2px map-get($map: $BAColors, $key: gray);
+            }
+            &.dragging {
+                border: dashed 2px map-get($map: $BAColors, $key: gray);
+                overflow: hidden;
+            }
+            &.dragg-entered {
+                background-color: map-get($map: $BAColors, $key: blue);
+            }
+            .long {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                color: map-get($map: $BAColors, $key: green);
+            }
+            .short {
+                top: 50%;
+                position: absolute;
+                right: 0;
+                color: map-get($map: $BAColors, $key: green);
+            }
+        }
+        .fab-button {
+            color: map-get($map: $BAColors, $key: white);
+            background-color: map-get($map: $BAColors, $key: primary);
+            border-radius: 50%;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        .map-symbol {
+            width: 50px;
+            height: 50px;
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 10;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            border: solid 1px gray;
+            background-color: map-get($map: $BAColors, $key: lightgray);
+            &.selected {
+                border-color: map-get($map: $BAColors, $key: blue) !important;
+                border-width: 2px;
+            }
+            &.dragging {
+                .rule {
+                    display: block;
+                }
+            }
+            .rule {
+                position: absolute;
+                display: none;
+                &.top-rule {
+                    top: -1px;
+                    left: 0;
+                    width: 1500px;
+                    border-bottom: dashed 1px gray;
+                    transform: translateX(-50%);
+                }
+                &.bottom-rule {
+                    bottom: -1px;
+                    left: 0;
+                    width: 1500px;
+                    border-top: dashed 1px gray;
+                    transform: translateX(-50%);
+                }
+                &.left-rule {
+                    top: 0px;
+                    left: -1px;
+                    height: 1500px;
+                    border-left: dashed 1px gray;
+                    transform: translateY(-50%);
+                }
+                &.right-rule {
+                    top: 0;
+                    right: -1px;
+                    height: 1500px;
+                    border-right: dashed 1px gray;
+                    transform: translateY(-50%);
+                }
+            }
+            .title {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+                overflow: hidden;
+                span {
+                    padding: 5px;
+                    background-color: rgba(238, 238, 238, 0.7);
+                    font-weight: bold;
+                }
+            }
+            .content {
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+        .ui-area {
+            width: 100px;
+            height: 50px;
+            background-color: lightgray;
+            border: dashed 2px gray;
+            z-index: 9;
+            .title {
+                display: inline-block;
+                padding: 5px;
+            }
+        }
+        .ui-door {
+            .content {
+                display: flex;
+                &.top {
+                    transform: rotate(180deg);
+                }
+                &.right {
+                    transform: rotate(-90deg);
+                }
+                &.bottom {
+                    transform: rotate(0);
+                }
+                &.left {
+                    transform: rotate(90deg);
+                }
+                .part {
+                    width: 50%;
+                    height: 100%;
+                    border: solid 1px gray;
+                    flex-grow: 1;
+                    border-bottom: none;
+                    &.left {
+                        border-top-right-radius: 100%;
+                        border-left: double 3px gray !important;
+                    }
+                    &.right {
+                        border-top-left-radius: 100%;
+                        border-right: double 3px gray !important;
+                        margin-left: -1px;
+                    }
+                }
+                .barrier {
+                    $barrierSize: 5px;
+                    align-self: flex-end;
+                    border: solid 1px gray;
+                    min-width: 2 * $barrierSize;
+                    min-height: $barrierSize;
+                    max-width: 2 *$barrierSize;
+                    max-height: $barrierSize;
+                    border-left: none;
+                    position: relative;
+                    &.left {
+                        margin-right: -1px;
+                    }
+                    &.right {
+                        transform: rotate(-180deg);
+                        margin-left: -1px;
+                    }
+                    .child {
+                        position: absolute;
+                        right: -1px;
+                        top: -1px;
+                        width: $barrierSize;
+                        height: $barrierSize;
+                        border: solid 1px gray;
+                        background-color: gray;
+                    }
+                }
+            }
+        }
+        .ui-table {
+            background-image: url('../assets/bistro-admin/images/map-icon/table-icon.jpg');
+        }
+        .ui-wc {
+            background-image: url('../assets/bistro-admin/images/map-icon/wc-icon.png');
+        }
+        .ui-bar {
+            background-image: url('../assets/bistro-admin/images/map-icon/bar-icon.png');
+        }
+        .ui-stair {
+            background-image: url('../assets/bistro-admin/images/map-icon/stair-icon.png');
+        }
+        .ui-kitchen {}
+        .ui-receptionist {}
+        .ui-restrict {
+            z-index: 8;
+            $step: 5px;
+            background-image: repeating-linear-gradient(-45deg, map-get($map: $BAColors, $key: lightgray), map-get($map: $BAColors, $key: lightgray) $step, map-get($map: $BAColors, $key: gray) $step, map-get($map: $BAColors, $key: gray) $step*2);
+        }
+    }
+    //Style for only mobile
+    @media(max-width: 768px) {
+        .left-side-bar {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<ion-header>
+
+    <ion-toolbar color="primary">
+        <ion-title>{{title}}</ion-title>
+        <ion-buttons end>
+            <button class="button-done" ion-button (click)="done()">Conclúido</button>
+        </ion-buttons>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div class="upload-button">
+        <div class="file-name">{{fileName? fileName: "Nenhum arquivo selecionado"}}</div>
+        <label for="selectFile" class="ba-link btn btn-primary">
+           Selecione um arquivo
+            <i class="fa fa-upload" aria-hidden="true"></i>
+          </label>
+        <input type="file" id="selectFile" name="selectFile" accept=".xls,.xlsx" />
+    </div>
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-header>
+    <ba-header></ba-header>
+</ion-header>
+
+<ion-content>
+    <div class="ba-content">
+        <ba-title [title]="'Adicionar Mesa"></ba-title>
+        <ba-buttons-function [showButton]="{buttonRemove: true, buttonCheck: true}" (buttonClick)="functionButtonClick($event)"></ba-buttons-function>
+        <div class="ba-section" *ngIf="table">
+            <div class="section-body">
+                <div class="form-group ba-form-group">
+                    <label for="table-name">Nome:</label>
+                    <input type="text" name="table-name" [(ngModel)]="table.name" class="form-control">
+                </div>
+                <div class="form-group ba-form-group">
+                    <label for="floor">Localização:</label>
+                    <select name="floor" id="floor" class="form-control" [(ngModel)]="table.areaId" (ngModelChange)="areaChange($event)">
+                      <option class="dropdown-item" value="{{floor.id}}" *ngFor="let floor of floors">{{floor.name}}</option> 
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group ba-form-group">
+                            <label for="table-capacity">Capacidade:</label>
+                            <input type="number" name="table-capacity" class="form-control" [(ngModel)]="table.capacity">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group ba-form-group">
+                            <label for="state">Status: </label>
+                            <select name="state" id="state" class="form-control" [(ngModel)]="table.state">
+                          <option class="dropdown-item" value="{{state.id}}" *ngFor="let state of tableStates">{{state.name}}</option> 
+                        </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

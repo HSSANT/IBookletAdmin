@@ -1,0 +1,68 @@
+<ion-header>
+    <ba-header></ba-header>
+</ion-header>
+
+<ion-content>
+    <div class="ba-content">
+        <ba-title [title]="'Chi tiết nhân viên'"></ba-title>
+        <ba-buttons-function [showButton]="{buttonRemove: true, buttonCheck: true}" (buttonClick)="functionButtonClick($event)"></ba-buttons-function>
+        <div class="ba-section" *ngIf="staff">
+            <div class="section-body">
+                <div class="form-group ba-form-group">
+                    <label for="staff-name">Nome:</label>
+                    <input type="text" name="staff-name" [(ngModel)]="staff.name" class="form-control">
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group ba-form-group">
+                            <label for="staff-email">Email:</label>
+                            <input type="text" name="staff-email" class="form-control" [(ngModel)]="staff.email">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group ba-form-group">
+                            <label for="staff-phone">Telefone: </label>
+                            <input type="text" name="staff-phone" class="form-control" [(ngModel)]="staff.phone">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ba-form-group">
+                    <label for="staff-address">Data de Nascimento:</label>
+                    <input type="date" name="staff-address" [ngModel]="staff.birthDay | date:'yyyy-MM-dd'" (ngModelChange)="staff.birthDay=$event" class="form-control">
+                </div>
+                <div class="form-group ba-form-group">
+                    <label for="staff-idcard">CPF:</label>
+                    <input type="text" name="staff-idcard" class="form-control" [(ngModel)]="staff.idCard">
+                </div>
+                <div class="form-group ba-form-group">
+                    <label for="staff-address">Endereço:</label>
+                    <input type="text" name="staff-email" class="form-control" [(ngModel)]="staff.address">
+                </div>
+                <div class="form-group ba-form-group">
+                    <label for="staff-info">Informaões Adicionais:</label>
+                    <input type="text" name="staff-info" [(ngModel)]="staff.additionInformation" class="form-control">
+                </div>
+                <div class="form-group ba-form-group">
+                    <label for="types">Carga Horário</label>
+                    <select name="types" id="types" class="form-control" [(ngModel)]="staff.staffType"> 
+                        <option class="dropdown-item" value="{{type.id}}" *ngFor="let type of typeData">{{type.name}}</option> 
+                    </select>
+                </div>
+                <div class="form-group ba-form-group">
+                    <label for="roles">Posição:</label>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{getStaffRoles(staff.staffRole)}}
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" *ngFor="let role of roleData" (click)="selectRole(role.id)">
+                                <input type="checkbox" [checked]="staff.staffRole.indexOf(role.id) >= 0 ? true : false" class="checkbox" value="true"> {{role.name}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

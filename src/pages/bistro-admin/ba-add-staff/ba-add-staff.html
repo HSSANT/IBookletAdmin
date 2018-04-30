@@ -1,0 +1,48 @@
+<ion-header>
+    <ba-header></ba-header>
+</ion-header>
+
+<ion-content>
+    <div class="ba-content">
+        <ba-title [title]="'Adicionar novo Funcionário'"></ba-title>
+        <ba-buttons-function [showButton]="{buttonRemove: true, buttonCheck: true}" (buttonClick)="functionButtonClick($event)"></ba-buttons-function>
+        <div class="ba-section" *ngIf="staff">
+            <div class="section-body">
+                <div class="form-group ba-form-group">
+                    <label for="staff-name">Nome:</label>
+                    <input type="text" name="staff-name" [(ngModel)]="staff.name" class="form-control">
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group ba-form-group">
+                            <label for="staff-email">Email:</label>
+                            <input type="text" name="staff-email" class="form-control" [(ngModel)]="staff.email">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group ba-form-group">
+                            <label for="staff-phone">Telefone: </label>
+                            <input type="text" name="staff-phone" class="form-control" [(ngModel)]="staff.phone">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ba-form-group">
+                    <label for="staff-address">Data de Nascimento:</label>
+                    <input type="date" name="staff-address" [ngModel]="staff.birthDay" (ngModelChange)="staff.birthDay=$event" class="form-control">
+                </div>
+                <div class="form-group ba-form-group">
+                    <label for="roles">Posição:</label>
+                    <select name="roles" id="roles" class="form-control" [(ngModel)]="staff.staffRole">
+                      <option class="dropdown-item" value="{{role.id}}" *ngFor="let role of roleData">{{role.name}}</option> 
+                    </select>
+                </div>
+                <div class="form-group ba-form-group">
+                    <label for="types">Carga Horária:</label>
+                    <select name="types" id="types" class="form-control" [(ngModel)]="staff.staffType"> 
+                      <option class="dropdown-item" value="{{type.id}}" *ngFor="let type of typeData">{{type.name}}</option> 
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

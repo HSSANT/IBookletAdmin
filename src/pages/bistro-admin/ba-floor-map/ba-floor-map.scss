@@ -1,0 +1,66 @@
+page-ba-floor-map {
+    .group-dropdown {
+        margin-left: 15px;
+        * {
+            font-size: 15px !important;
+        }
+    }
+    .map-item {
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: inline-block;
+        &:hover {
+            &::after {
+                transform: translateX(0);
+            }
+            .title {
+                color: map-get($map: $BAColors, $key: white);
+            }
+            .button-group {
+                transform: translate(-50%, -50%);
+            }
+        }
+        &::after {
+            display: block;
+            content: " ";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            background-color: rgba(17, 34, 51, 0.5);
+            transform: translateX(1000px);
+            transition: transform 400ms;
+        }
+        img {
+            width: 100%;
+            display: block;
+            z-index: 1;
+            filter: blur(1px);
+        }
+        .title {
+            font-weight: bold;
+            text-align: center;
+            display: block;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            z-index: 3;
+            transition: color 400ms;
+            font-size: 1.2em;
+        }
+        .button-group {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-1000px, -50%);
+            z-index: 3;
+            transition: transform 400ms;
+        }
+    }
+}

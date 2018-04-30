@@ -1,0 +1,240 @@
+ba-header {
+    $headerHeight: 3*map-get($map: $BASizes, $key: lineHeight);
+    .ba-header {
+        height: $headerHeight;
+        background-color: map-get($map: $BAColors, $key: primary);
+        display: flex;
+        justify-content: flex-end;
+        padding-right: map-get($map: $BASizes, $key: defaultPadding);
+        color: map-get($map: $BAColors, $key: white);
+        .header-button {
+            width: $headerHeight;
+            height: 100%;
+            font-size: 1.3em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            .button-content {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &.active {
+                background-color: #98262e;
+                .overlay-content {
+                    display: block;
+                }
+            }
+            .overlay-content {
+                display: none;
+                bottom: 0;
+                right: 0;
+                background-color: map-get($map: $BAColors, $key: white);
+                border: solid 1px map-get($map: $BAColors, $key: lightgray);
+                color: map-get($map: $BAColors, $key: black);
+                width: 250px;
+                transform: translateY(100%);
+                position: absolute;
+                font-size: .7em;
+                .overlay-header {
+                    font-size: .9em;
+                    border-bottom: solid 1px map-get($map: $BAColors, $key: lightgray);
+                    padding: 5px 8px;
+                }
+                .overlay-body {
+                    .overlay-item {
+                        padding: 8px 8px;
+                        border-bottom: solid 1px map-get($map: $BAColors, $key: lightgray);
+                        &:hover {
+                            background-color: map-get($map: $BAColors, $key: lightgray);
+                        }
+                    }
+                }
+            }
+            .bagde {
+                width: 1.5rem;
+                height: 1.5rem;
+                font-size: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                border-radius: 50%;
+                background-color: map-get($map: $BAColors, $key: green);
+                transform: translateY(-110%);
+            }
+        }
+        .header-left {
+            height: 100%;
+            margin-right: auto;
+        }
+        .header-main {
+            flex: 1;
+            z-index: 1;
+            &.active {
+                z-index: 3;
+            }
+        }
+        .header-right {
+            display: flex;
+            height: 100%;
+            z-index: 2;
+            .avatar {
+                width: $headerHeight;
+                height: 100%;
+                display: flex;
+                margin: 0 map-get($map: $BASizes, $key: defaultPadding);
+                padding: 15px;
+                position: relative;
+                &.active {
+                    background-color: #98262e;
+                    .overlay-content {
+                        display: block;
+                    }
+                }
+                .overlay-content {
+                    display: none;
+                    bottom: 0;
+                    right: 0;
+                    background-color: map-get($map: $BAColors, $key: white);
+                    border: solid 1px map-get($map: $BAColors, $key: lightgray);
+                    color: map-get($map: $BAColors, $key: black);
+                    width: 250px;
+                    transform: translateY(100%);
+                    position: absolute;
+                    font-size: .9em;
+                    .overlay-header {
+                        font-size: .9em;
+                        border-bottom: solid 1px map-get($map: $BAColors, $key: lightgray);
+                        padding: 5px 8px;
+                    }
+                    .overlay-body {
+                        .overlay-item {
+                            padding: 8px 8px;
+                            border-bottom: solid 1px map-get($map: $BAColors, $key: lightgray);
+                            &:hover {
+                                background-color: map-get($map: $BAColors, $key: lightgray);
+                            }
+                        }
+                    }
+                    .overlay-footer {
+                        padding: 5px 8px;
+                        text-align: center;
+                        font-size: .9em;
+                    }
+                }
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    display: block;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .search-bar {
+        transition: all 700ms ease-in;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        padding-right: 16px;
+        background-color: transparent;
+        z-index: 1;
+        &.active {
+            z-index: 3;
+            background-color: map-get($map: $BAColors, $key: primary);
+        }
+        .search-input {
+            transition: all 700ms ease-in;
+            width: 0;
+            padding: 0.25*map-get($map: $BASizes, $key: lineHeight) 0;
+            text-align: left;
+            height: 1.5*map-get($map: $BASizes, $key: lineHeight);
+            font-size: 1em;
+            line-height: map-get($map: $BASizes, $key: lineHeight);
+            border: none;
+            color: map-get($map: $BAColors, $key: white);
+            border-radius: 20px;
+            &.active {
+                width: 100%;
+                padding-left: $headerHeight;
+                padding-right: 10px;
+                color: map-get($map: $BAColors, $key: black);
+            }
+        }
+        .search-button {
+            transition: all 700ms ease-in;
+            width: $headerHeight;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            font-size: 1.3em;
+            .search {
+                display: inline;
+            }
+            .cancel {
+                display: none;
+            }
+            &.active {
+                color: map-get($map: $BAColors, $key: black);
+                .search {
+                    display: none;
+                }
+                .cancel {
+                    display: inline;
+                }
+            }
+        }
+    }
+    @media(max-width: 576px) {
+        .ba-header {
+            padding: 0 .5em;
+            .header-main {
+                position: absolute;
+                left: $headerHeight;
+                top: 0;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        .search-bar {
+            .search-button {
+                width: 0.5*$headerHeight;
+            }
+            .search-input {
+                &.active {
+                    padding-left: 0.5*$headerHeight;
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .ba-header {
+            .header-button {
+                position: static;
+            }
+        }
+        .header-right {
+            .avatar {
+                position: static !important;
+            }
+        }
+        .overlay-content {
+            right: 5% !important;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+<ion-header>
+    <ba-header></ba-header>
+</ion-header>
+
+
+<ion-content>
+    <div class="ba-content">
+        <ba-title [title]="'Mapa do Restaurante  ' + restName"></ba-title>
+        <div class="main-controls">
+            <ba-buttons-function [showButton]="{buttonAdd: true}" (buttonClick)="functionButtonClick($event)"></ba-buttons-function>
+        </div>
+        <div class="ba-section">
+            <div class="section-header">
+                <div class="form-group ba-form-group" *ngIf="selectedRestaurant">
+                    <label>Nome: </label> <span>{{selectedRestaurant.name}}</span>
+                </div>
+                <!-- <div class="form-group ba-form-group">
+                    <label for="restaurant">Tầng:</label>
+                    <div class="btn-group group-dropdown">
+                        <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              {{selectedFloor ? selectedFloor.name : "Chọn tầng"}}
+                            </button>
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item" *ngFor="let floor of floors" (click)="selectFloor(floor)">{{floor.name}}</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="section-body">
+                <div class="map-item col-sm-6 col-xs-12" *ngFor="let map of maps">
+                    <img src="assets/bistro-admin/images/map-image/map1.png" alt="map">
+                    <span class="title">{{map.title}}</span>
+                    <div class="button-group">
+                        <button class="btn btn-success" (click)="edit(map)">
+                          <i class="fa fa-pencil" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn btn-primary" (click)="gotoMapMaker(map)">
+                          <i class="fa fa-map" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn btn-danger" (click)="delete(map)">
+                          <i class="fa fa-times" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,76 @@
+<ion-header>
+    <ba-header></ba-header>
+</ion-header>
+
+<ion-content>
+    <div class="ba-content">
+        <ba-title [title]="'Quản lý nhân viên'"></ba-title>
+        <!-- <div class="main-controls">
+            <select name="provinces" id="provinces" class="form-control ba-filter">
+                <option class="dropdown-item" selected="true" value="1">Chọn cửa hàng</option>
+                <option class="dropdown-item" value="2">Bistro</option>
+                <option class="dropdown-item" value="3">Dancer</option>
+                <option class="dropdown-item" value="4">B8</option>
+            </select>
+            <ba-buttons-function [showButton]="{buttonAdd: true}" (buttonClick)="functionButtonClick($event)"></ba-buttons-function>
+        </div> -->
+        <div class="main-controls">
+            <ba-buttons-function [showButton]="{buttonAdd: true, buttonImport: true}" (buttonClick)="functionButtonClick($event)"></ba-buttons-function>
+        </div>
+        <div class="ba-section">
+            <div class="section-body">
+                <div class="table table-responsive table-bordered">
+                    <table class="table">
+                        <tr>
+                            <th text-center>ID</th>
+                            <th>Nome</th>
+                            <th>Email </th>
+                            <th>Telefone</th>
+                            <th>Posição</th>
+                            <th>Status</th>
+                            <th>Ação</th>
+                        </tr>
+                        <tr *ngFor="let staff of staffs; let i = index">
+                            <td text-center>{{i+1}}</td>
+                            <td>{{staff.name}}</td>
+                            <td style="word-break: break-all;">{{staff.email}}</td>
+                            <td>{{staff.phone}}</td>
+                            <td>{{getStaffRoles(staff.staffRole)}}</td>
+                            <td>Trabalho</td>
+                            <td>
+                                <button class="btn btn-success" (click)="gotoStaffDetail(staff)">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </button>
+                                <button class="btn btn-danger" (click)="delete(staff)">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="section-footer">
+                <ul class="pagination pagination-lg">
+                    <li class="page-item disabled">
+                        <span class="page-link">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </span>
+                    </li>
+                    <li class="page-item"><span class="page-link" href="#">1</span></li>
+                    <li class="page-item active">
+                        <span class="page-link">
+                            2
+                            <span class="sr-only">(current)</span>
+                        </span>
+                    </li>
+                    <li class="page-item"><span class="page-link" href="#">3</span></li>
+                    <li class="page-item">
+                        <span class="page-link" href="#">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</ion-content>

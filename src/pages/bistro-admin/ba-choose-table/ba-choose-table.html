@@ -1,0 +1,31 @@
+<ion-header>
+    <div class="title-bar">
+        <button class="left-button" navPop>
+          <ion-icon name="ios-arrow-round-back"></ion-icon>
+        </button>
+        <span class="title">Selecione a Mesa</span>
+    </div>
+    <ion-segment mode="ios" *ngIf="floors.length > 0" [(ngModel)]="selectedFloorId" (ionChange)="changeFloor()">
+        <ion-segment-button value="{{floor.id}}" *ngFor="let floor of floors">
+            {{floor.name}}
+        </ion-segment-button>
+    </ion-segment>
+    <ion-segment *ngIf="floors.length == 0">
+        <ion-segment-button value="camera">
+            Primeiro Andar
+        </ion-segment-button>
+        <ion-segment-button value="bookmark">
+            Segundo Andar
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content>
+    <div class="table-list">
+        <div class="table-item" [class.selected]="table.id == selectedTableId" *ngFor="let table of showTables" (click)="chooseTable(table)">
+            <ion-icon name="ba-family-table" *ngIf="table.capacity >= 6"></ion-icon>
+            <ion-icon name="ba-couple-table" *ngIf="table.capacity < 6"></ion-icon>
+            <span class="table-name">{{table.name}}</span>
+        </div>
+    </div>
+</ion-content>

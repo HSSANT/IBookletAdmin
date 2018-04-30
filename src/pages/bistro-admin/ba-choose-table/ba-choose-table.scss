@@ -1,0 +1,81 @@
+page-ba-choose-table {
+    .header {
+        background-color: map-get($map: $BAColors, $key: primary);
+        color: map-get($map: $BAColors, $key: white);
+        text-align: center;
+        &::after {
+            display: none;
+        }
+        .title-bar {
+            padding: 10px;
+            position: relative;
+            font-size: 1.2em;
+            .left-button {
+                background: transparent;
+                border: none;
+                color: map-get($map: $BAColors, $key: white);
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                padding: 0 16px;
+                font-size: 1.2em;
+            }
+        }
+        .segment {
+            border: none;
+            .segment-button {
+                border: none;
+                color: map-get($map: $BAColors, $key: white);
+                border-radius: unset;
+                &.segment-activated {
+                    background-color: map-get($map: $BAColors, $key: white);
+                    color: map-get($map: $BAColors, $key: black);
+                }
+            }
+        }
+    }
+    .scroll-content {
+        padding: 0 15px;
+    }
+    .table-list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        .table-item {
+            width: 5em;
+            height: 5em;
+            min-width: 5em;
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            padding: 0;
+            cursor: pointer;
+            &:hover,
+            &.selected {
+                .icon {
+                    color: map-get($map: $BAColors, $key: primary);
+                }
+                .table-name {
+                    color: map-get($map: $BAColors, $key: white);
+                }
+            }
+            .icon {
+                font-size: 5em;
+                color: #cecece;
+            }
+            .table-name {
+                color: map-get($map: $BAColors, $key: black);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: bold;
+            }
+        }
+    }
+}

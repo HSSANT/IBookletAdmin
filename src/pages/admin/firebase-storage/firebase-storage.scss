@@ -1,0 +1,120 @@
+page-firebase-storage {
+    $col-preview-size: 60px;
+    ion-content {
+        background-color: rgb(231, 231, 231) !important;
+    }
+    .folder-container {
+        margin: 16px;
+        background-color: white;
+        min-height: 40vh;
+        .folder-content-container {
+            max-height: 75vh;
+            overflow: auto;
+            padding: 10px;
+        }
+        .color-folder {
+            color: rgb(255, 234, 50);
+        }
+        .folder-bar {
+            background-color: rgb(204, 201, 201);
+            display: flex;
+            align-items: center;
+            position: relative;
+            .folder-bar-items {
+                padding-left: 16px;
+                overflow-x: auto;
+                white-space: nowrap;
+                flex: 1;
+                ion-icon {
+                    padding-right: 10px;
+                }
+                ion-icon:hover {
+                    color: map-get($colors, 'primary');
+                }
+                .item-folder:hover {
+                    color: map-get($colors, 'primary');
+                }
+            }
+            .folder-bar-buttons {
+                justify-content: end;
+                text-align: right;
+            }
+            .item-folder {
+                display: inline-flex;
+                align-items: center;
+                padding-right: 10px;
+            }
+            @media only screen and (max-width: 480px) {
+                .folder-bar-items {
+                    width: 100%;
+                }
+                .folder-bar-buttons {
+                    width: 100%;
+                }
+            }
+            .btn-inactive {
+                color: gray;
+            }
+        }
+        .selected-file {
+            font-weight: bold;
+            // color: map-get($colors, 'primary');
+        }
+        .preview-selected-file {
+            font-weight: bold;
+        }
+    }
+    .folder {
+        display: flex;
+        align-items: center;
+    }
+    // Input File
+    .input-file {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        position: absolute;
+        z-index: 11;
+    }
+    .col-preview {
+        display: block;
+        text-align: center;
+        font-size: 4em;
+        img {
+            height: $col-preview-size;
+            width: $col-preview-size;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        ion-icon {
+            max-height: $col-preview-size;
+            max-width: $col-preview-size;
+        }
+        .icon-no-preview {
+            color: rgb(221, 220, 220);
+        }
+    }
+    .col-name {
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .file-uploading {
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+        padding: 16px;
+        width: calc(100% - 32px);
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        .upload-percent {
+            float: right;
+            right: 10px;
+        }
+    }
+}

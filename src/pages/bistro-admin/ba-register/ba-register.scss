@@ -1,0 +1,118 @@
+page-ba-register {
+    ion-content,
+    .scroll-content {
+        background-color: #123 !important;
+    }
+    .ba-register-form {
+        background-color: map-get($map: $BAColors, $key: white);
+        padding: 0;
+        overflow: auto;
+        .ba-form {
+            .text-input {
+                padding: 0;
+            }
+        }
+    }
+    .logo {
+        width: 100%;
+        padding: 3em;
+        text-align: center;
+        img {
+            width: 50%;
+        }
+    }
+    .login-button {
+        width: 100%;
+        text-align: center;
+        padding: 20px 15%;
+        .ba-button {
+            display: block;
+            width: 100%;
+            font-size: 1em;
+        }
+    }
+    .divider {
+        width: 100%;
+        text-align: center;
+        padding: 0 15%;
+        position: relative;
+        .line {
+            width: 100%;
+            height: 1px;
+            background-color: map-get($BAColors, lightgray);
+        }
+        .divider-text {
+            color: map-get($BAColors, black);
+            display: inline-block;
+            padding: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            background-color: #FFF;
+        }
+    }
+    .social-login {
+        margin-top: 20px;
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        $socialSize: 4em;
+        .social-button {
+            border-radius: 50%;
+            width: $socialSize;
+            height: $socialSize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #123;
+            color: #FFF;
+            margin: 0 10px;
+            i {
+                font-size: 2em;
+            }
+            &.facebook-button {
+                background-color: #5285c6;
+            }
+            &.google-button {
+                background-color: #ff5a60;
+            }
+        }
+    }
+    .register-button {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        margin-top: 10px;
+        span {
+            color: map-get($BAColors, primary);
+            font-weight: 500;
+            padding: 5px;
+        }
+    }
+    //Style for desktop and above
+    @media (min-width: 768px) {}
+    //Style for tablet and above
+    @media(min-width: 576px) {
+        .scroll-content {
+            display: flex;
+            padding: 20px;
+        }
+        .ba-register-form {
+            margin: auto;
+            border-radius: 10px;
+        }
+    }
+    //Style for only mobile
+    @media(max-width: 576px) {
+        .ba-register-form {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
