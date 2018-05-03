@@ -14,6 +14,7 @@ import { Staff } from '../classes/staff';
 import { Food, FoodType } from '../classes/food';
 import { FoodCategory } from '../classes/food-category';
 import { Table } from '../classes/table';
+import { Restaurant } from '../classes/restaurant';
 
 @Injectable()
 export class FirebaseServiceProvider {
@@ -261,6 +262,49 @@ export class FirebaseServiceProvider {
       id_card: staff.idCard
     })
   }
+
+  // "rest_id": 1,
+  // "Vendor_id ": 1,
+  // "restaurant_name": "Common long-nosed armadillo",
+  // "restaurant_email": "tvasyanin0@nifty.com",
+  // "city": "Mengcheng Chengguanzhen",
+  // "image": "68.65.195.45/4",
+  // "status": false,
+  // "lat": 94,
+  // "lng": 81
+  addRestaurant(restaurant: Restaurant) {
+    return this.addDocument(FIREBASE_PATH.RESTAURANT , {
+      address: restaurant.address,
+      firebaseId: restaurant.firebaseId,
+      firebaseReference: restaurant.firebaseReference,
+      geoPoint: restaurant.geoPoint,
+      hotline: restaurant.hotline,
+      id: restaurant.id,
+      logo: restaurant.logo,
+      name: restaurant.name,
+      state: restaurant.state,
+      timeClose: restaurant.timeClose,
+      timeOpen: restaurant.timeOpen,
+      vendorId: restaurant.vendorId,
+      vendorLogo: restaurant.vendorLogo,
+      vendorName: restaurant.vendorName
+    })
+  }
+
+  // this.address = data.address;
+  // this.firebaseId = data.firebase_id;
+  // this.firebaseReference = data.firebase_reference;
+  // this.geoPoint = data.geopoint;
+  // this.hotline = data.hotline;
+  // this.id = data.id;
+  // this.logo = data.logo;
+  // this.name = data.name;
+  // this.state = +data.state;
+  // this.timeClose = data.time_close;
+  // this.timeOpen = data.time_open;
+  // this.vendorId = data.vendor_id;
+  // this.vendorLogo = data.vendor_logo;
+  // this.vendorName = data.vendor_name;
 
   createUserWithEmailAndPassword(email) {
     return firebase.auth().createUserWithEmailAndPassword(email, this.defaultPass);

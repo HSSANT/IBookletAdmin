@@ -518,6 +518,9 @@ export class AppControllerProvider {
   addFoodToRestaurant(restId: string, food: Food) {
     return this.firebaseService.addFoodToRestaurant(restId, food);
   }
+  addRestaurant(restaurant: Restaurant) {
+    return this.firebaseService.addRestaurant(restaurant);
+  }
 
   getFoodById(restId: string, foodId: string): Promise<Food> {
     return new Promise((resolve, reject) => {
