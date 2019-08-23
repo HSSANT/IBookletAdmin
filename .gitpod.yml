@@ -1,3 +1,2 @@
-
-file: DockerFile
-
+image:
+  file: .gitpod.fallen90/ionic-docker
